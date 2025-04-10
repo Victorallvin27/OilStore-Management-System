@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `store`
+-- Database: `oilStore`
 --
 
 -- --------------------------------------------------------
@@ -41,14 +41,14 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `pic`, `details`, `date`) VALUES
-(1, 'Capsule', 'cap.png', 'these are capsules whisd some k dsfksd', '2020-11-03 04:58:57'),
-(2, 'Tablets', 'tablet.png', 'some of the pic to be modii dfs tablet', '2020-11-03 04:58:57'),
-(3, 'Syrup', 'syrup.png', 'these are capsules whisd some k dsfksd', '2020-11-03 04:59:24'),
-(4, 'Cream', 'cream.png', 'some of the pic to be modii dfs tablet', '2020-11-03 04:59:24'),
-(5, 'Lotion', 'lotion.png', 'these are capsules whisd some k dsfksd', '2020-11-03 04:59:59'),
-(6, 'Syrunj', 'syrunj.png', 'some of the pic to be modii dfs tablet', '2020-11-03 04:59:59'),
-(7, 'Injection', 'injection.jpg', 'these are capsules whisd some k dsfksd', '2020-11-03 05:00:19'),
-(8, 'Other', 'fk.jpg', 'some of the pic to be modii dfs tablet', '2020-11-03 05:00:19');
+(1, 'Olive oil', 'olivieoil.png', 'oil', '2025-11-03 04:58:57'),
+(2, 'Avacado oil', 'avocadooil.jpg', 'oil', '2025-11-03 04:58:57'),
+(3, 'Almond oil', 'almondoil.png', 'oil', '2025-11-03 04:59:24'),
+(4, 'Sunflower oil','sunfloweroil.png', 'oil', '2025-11-03 04:59:24'),
+(5, 'Mustard oil', 'mustardoil.png', 'oil', '2025-11-03 04:59:59'),
+(6, 'Palm oil', 'palmoil.png', 'oil','2025-11-03 04:59:59'),
+(7, 'Coconut oil', 'coconutoil.png', 'oil', '2025-11-03 05:00:19'),
+(8, 'Corn oil', 'cornoil.png', 'oil','2025-11-03 05:00:19');
 
 -- --------------------------------------------------------
 
@@ -74,21 +74,22 @@ CREATE TABLE `inventeries` (
 --
 
 INSERT INTO `inventeries` (`id`, `catId`, `supplier`, `name`, `unit`, `price`, `pic`, `description`, `company`, `date`) VALUES
-(5, 2, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', 'fasdf', '2020-11-03 06:10:37'),
-(6, 2, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', 'sdfas', '2020-11-03 06:10:40'),
-(7, 2, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:10:43'),
-(9, 2, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:10:48'),
-(10, 3, 'salman Khan', 'Disprin', '6mg', '6', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:11:36'),
-(11, 3, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:11:43'),
-(12, 4, 'salman Khan', 'Disprin', '6mg', '8', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:11:50'),
-(13, 4, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:11:53'),
-(14, 4, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:11:56'),
-(15, 5, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:12:03'),
-(16, 6, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:12:09'),
-(17, 6, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:12:14'),
-(18, 6, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:12:17'),
-(19, 6, 'salman Khan', 'Disprin', '6mg', '7', 'fk.jpg', 'these are 2mg disprin for the cure of some thing extera', '0', '2020-11-03 06:12:21'),
-(20, 1, 'salman Khan', 'Panadol', '100mg', '12', '', 'there is no askdfas dfsakdfkas', 'atalfa', '2020-11-17 16:20:25');
+(1, 2, 'Dhamotharan', 'Avacado oil', '1 liter', '120', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:10:37'),
+(2, 2, 'Dhamotharan', 'Avacado oil', '2 liter', '240', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:10:40'),
+(3, 2, 'Dhamotharan', 'Avacado oil', '3 liter', '480', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:10:43'),
+(4, 2, 'Dhamotharan', 'Avacado oil', '4 liter', '960', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:10:48'),
+(5, 3, 'Dhamotharan', 'Almond oil', '1 liter', '120', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:36'),
+(5, 3, 'Dhamotharan', 'Almond oil', '2 liter', '240', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:36'),
+(6, 3, 'Dhamotharan', 'Almond oil', '3 liter', '480', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:43'),
+(7, 4, 'Dhamotharan', 'Sunflower oil', '1 liter', '120', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:50'),
+(8, 4, 'Dhamotharan', 'Sunflower oil', '2 liter', '240', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:53'),
+(9, 4, 'Dhamotharan', 'Sunflower oil', '3 liter', '480', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:11:56'),
+(10, 5, 'Dhamotharan', 'Mustard oil', '1 liter', '120', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:12:03'),
+(11, 6, 'Dhamotharan', 'Palm oil', '1 liter', '120', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:12:09'),
+(12, 6, 'Dhamotharan', 'Palm oil', '2 liter', '240', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:12:14'),
+(13, 6, 'Dhamotharan', 'Palm oil', '3 liter', '480', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:12:17'),
+(14, 6, 'Dhamotharan', 'Palm oil', '4 liter', '960', 'user.png', 'these are 2mg disprin for the cure of some thing extera', 'oilStore', '2020-11-03 06:12:21'),
+(15, 1, 'Dhamotharan', 'Olive oil', '1 liter', '120','user.png', 'there is no askdfas dfsakdfkas', 'oilStore', '2020-11-17 16:20:25');
 
 -- --------------------------------------------------------
 
@@ -107,7 +108,7 @@ CREATE TABLE `site` (
 --
 
 INSERT INTO `site` (`id`, `title`, `name`) VALUES
-(1, 'Medical Stores', 'Medical Stores');
+(1, 'Oil Store', 'OIL STORE');
 
 -- --------------------------------------------------------
 
@@ -131,9 +132,9 @@ CREATE TABLE `sold` (
 --
 
 INSERT INTO `sold` (`id`, `name`, `contact`, `discount`, `item`, `amount`, `userId`, `date`) VALUES
-(2, 'Akshay Kumar', '03445584686', '10', '2', '3', 1, '2020-11-17 15:44:15'),
-(3, 'Sunil Shetty', 'dsfgsdf', '10', '3', '25', 1, '2020-11-17 16:47:22'),
-(4, 'Paresh Rawal', '03451212345', '21', '4', '35', 1, '2020-11-19 08:22:46');
+(2, 'Dhamotharan', '03445584686', '10', '2', '3', 1, '2025-11-17 15:44:15'),
+(3, 'Victor', '7397304821', '10', '3', '25', 1, '2025-11-17 16:47:22'),
+(4, 'Kalai selvi', '93763883983', '21', '4', '35', 1, '2025-11-19 08:22:46');
 
 -- --------------------------------------------------------
 
@@ -156,11 +157,11 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`id`, `name`, `pic`, `number`, `address`, `cnic`, `date`) VALUES
-(1, 'salman khan', 'fk.jpg', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:49'),
-(2, 'salman khan', 'fk.jpg', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:53'),
-(3, 'salman khan', 'fk.jpg', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:56'),
-(4, 'salman khan', 'fk.jpg', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:59'),
-(5, 'salman khan', 'fk.jpg', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:24:01');
+(1, 'Dhamotharan', 'user.png', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:49'),
+(2, 'Dhamotharan', 'user.png', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:53'),
+(3, 'Dhamotharan', 'user.png', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:56'),
+(4, 'Dhamotharan', 'user.png', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:23:59'),
+(5, 'Dhamotharan', 'user.png', '2432342342', 'adfasdfasfdasdf', '2342342342423423', '2020-11-03 07:24:01');
 
 -- --------------------------------------------------------
 
@@ -183,8 +184,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `pic`, `number`, `date`) VALUES
-(1, 'admin@gmail.com', 'admin', 'FK', 'fk.jpg', '03356910260', '2020-11-02 12:34:53');
-
+(1, 'admin@gmail.com', 'admin', 'Dhamotharan', 'user.png', '03356910260', '2025-11-02 12:34:53'),
+(2, 'allvinvictor.com@gmail.com', 'victor', 'victor allvin', 'user.png', '03356910260', '2025-11-02 12:34:53');
 --
 -- Indexes for dumped tables
 --

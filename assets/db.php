@@ -1,6 +1,6 @@
 <?php 
-   $schema='medical_store';
-   $con = new mysqli('localhost','root','',$schema);
+   $schema='oilStore';
+   $con = new mysqli('localhost','root','',$schema,3308);
 //for user informationa making available for all pages
 
     $array = $con->query("select * from users where id ='$_SESSION[userId]'");

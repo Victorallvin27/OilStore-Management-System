@@ -44,7 +44,7 @@ if (isset($_POST['login']))
 {
 	$user = $_POST['email'];
     $pass = $_POST['password'];
-    $con = new mysqli('localhost','root','','medical_store');
+    $con = new mysqli('localhost','root','','oilStore',3308);
 
     $result = $con->query("select * from users where email='$user' AND password='$pass'");
     if($result->num_rows>0)

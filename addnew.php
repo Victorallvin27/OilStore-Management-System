@@ -86,7 +86,7 @@ if(!isset($_SESSION['userId']))
 </div>
 <?php 
 if (isset($_POST['saveProduct'])) {
-if ($con->query("insert into inventeries (catId,supplier,name,unit,price,description,company) values ('$_POST[catId]','$_POST[supplier]','$_POST[name]','$_POST[unit]','$_POST[price]','$_POST[discription]','$_POST[company]')")) {
+if ($con->query("insert into inventeries (catId,supplier,name,unit,price,description,company,quantity) values ('$_POST[catId]','$_POST[supplier]','$_POST[name]','$_POST[unit]','$_POST[price]','$_POST[discription]','$_POST[company]','$_POST[quantity]')")) {
   $notice ="<div class='alert alert-success'>Successfully Saved</div>";
 }
 else{
@@ -111,11 +111,15 @@ else{
           </div>
           <div class="form-group">
             <label for="some" class="col-form-label">Unit</label>
-            <input type="text" name="unit" placeholder="i.e 50mg" class="form-control" id="some" required>
+            <input type="text" name="unit" placeholder="i.e 1 liter" class="form-control" id="some" required>
           </div>
           <div class="form-group">
             <label for="some" class="col-form-label">Price Per Unit</label>
             <input type="number" name="price"  class="form-control" id="some" required>
+          </div>
+          <div class="form-group">
+            <label for="some" class="col-form-label">Quantity</label>
+            <input type="number" name="quantity"  class="form-control" id="some" required>
           </div>
           <div class="form-group">
             <label for="some" class="col-form-label">Supplier Name</label>

@@ -65,6 +65,21 @@ if(!isset($_SESSION['userId']))
       echo "</tr>";
       $total = $total + $row['price']*$row['qty'];
     }
+    
+    foreach ($_SESSION['bill'] as $item) {
+      $productId = $item['id'];
+      $purchaseQty = $item['qty'];
+
+      $res = $con->query("SELECT quantity FROM inventeries WHERE id = $productId");
+      if ($res && $row = $res->fetch_assoc()) {
+          $currentQty = $row['quantity'];
+    
+          $newQty = $currentQty - $purchaseQty;
+
+          $con->query("UPDATE inventeries SET quantity = $newQty WHERE id = $productId");
+      }
+    }
+    
   ?>
   <tr>
     <td colspan="3" style="text-align: right;">Gross Total</td><th><?php echo $total; ?></th>

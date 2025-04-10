@@ -8,7 +8,7 @@ if(!isset($_SESSION['userId']))
 
  ?>
 <?php require "include/function.php" ?>
-<?php require 'assets/db.php';?>
+<?php require 'assets/db.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@ if(!isset($_SESSION['userId']))
   <title><?php echo siteTitle(); ?></title>
   <?php require "assets/autoloader.php" ?>
   <style type="text/css">
-  <?php include 'css/customStyle.css'; ?>
+  <?php include 'css/customStyle.css' ?>
 
   </style>
 
@@ -103,6 +103,7 @@ else
         <th>Name</th>
         <th>Unit</th>
         <th>Price Per Unit</th>
+        <th>Quantity</th>
         <th>Supplier Name</th>
         <th>Company</th>
         <th></th>
@@ -120,6 +121,7 @@ else
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['unit']; ?></td>
             <td><?php echo $row['price']; ?></td>
+            <td><?php echo $row['quantity'];?></td>
             <td><?php echo $row['supplier']; ?></td>
             <td><?php echo $row['company']; ?></td>
             <?php 
